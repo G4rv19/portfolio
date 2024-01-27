@@ -5,20 +5,28 @@ body {
 div {
     margin: 10px;
 }
-
-h1 {
-    text-align: center;
-}
-
 section {
     margin: 10px;
 }
-ul {
-    width: 300px;
-    margin-top: 0px;
+h1 {
+    text-align: center;
+    margin: 15px;
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 100%;
+    margin-left: 2px;
 }
+p {
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+}
+.github, .instagram, .email {
+    font-size: 24px; 
+    margin: 10px; 
+}
+
