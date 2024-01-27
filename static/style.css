@@ -25,8 +25,21 @@ p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
 }
-.github, .instagram, .email {
-    font-size: 24px; 
-    margin: 10px; 
+.github, .instagram, .email, .linkedin {
+    font-size: 24px;
+    margin: 10px;
 }
+
+button {
+    display: flex;
+    flex-direction: column; /* Adjust the flex direction to column if needed */
+    justify-content: center;
+    align-items: center;
+    border: 3px solid green;
+}
+
+.icons button a {
+    text-decoration: none;
+}
+
 
