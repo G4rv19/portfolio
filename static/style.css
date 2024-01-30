@@ -31,15 +31,14 @@ p {
 }
 
 button {
-    display: flex;
-    flex-direction: column; /* Adjust the flex direction to column if needed */
+    display: inline-grid;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 3px solid green;
+    border-radius: 20%;
 }
 
 .icons button a {
     text-decoration: none;
 }
-
-
