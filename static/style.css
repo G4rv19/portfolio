@@ -19,6 +19,7 @@ img {
     height: 150px;
     border-radius: 100%;
     margin-left: 2px;
+    display: flex;
 }
 p {
     font-size: larger;
@@ -35,10 +36,14 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 3px solid green;
-    border-radius: 20%;
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    width: 100px;
 }
-
-.icons button a {
+a {
     text-decoration: none;
-}
+    color:#ff0033;
+  }
