@@ -26,9 +26,23 @@ p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
 }
+.Sociallinks div {
+    display: block;
+    align-items: center;
+    text-align: center;
+}
+.Sociallinks h2 {
+    font-size: x-large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px;
+    align-items: center;
+    text-align: center;
+}
 .github, .instagram, .email, .linkedin {
     font-size: 24px;
-    margin: 10px;
+    margin: auto;
+    padding: 25px;
+    display: inline-block;
 }
 
 button {
@@ -39,17 +53,19 @@ button {
     border: none;
     text-align: center;
     font-size: 24px;
-    padding: 20px;
+    padding: 25px;
     width: 100px;
 }
 a {
     text-decoration: none;
     display: inline-block;
+    align-items: center;
   }
 
 .github button{
     background-color: #171515;
     color: white ;
+    align-items: center;
 }
 
 .instagram button{
