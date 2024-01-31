@@ -31,9 +31,11 @@ p {
 .Projects h2 {
     text-align: center;
     font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .Projects p {
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .Sociallinks div {
     display: block;
