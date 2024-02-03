@@ -1,12 +1,12 @@
 {
   "builds": [
     {
-      "src": "/home/G4rv19/portfolio/app/(.*)",
+      "src": "/app/(.*)",
       "use": "vercel-python@3.8"
     }
   ],
   "routes": [
-    { "src": "/templates/(.*)", "dest": "/home/G4rv19/portfolio/app/templates/$1" },
-    { "src": "/(.*)", "dest": "/home/G4rv19/portfolio/vercel_wrapper.py" }
+    { "src": "/app/templates/(.*)", "dest": "/app/templates/$1" },
+    { "src": "/(.*)", "dest": "/app/vercel_wrapper.py" }
   ]
 }
