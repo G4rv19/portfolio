@@ -21,7 +21,7 @@ def handler(request, response):
 # For rendering Flask templates
 def render_template_handler(request):
     # Adjust the path to your templates directory
-    templates_path = os.path.join(os.path.dirname(__file__), "app", "app/templates")
+    templates_path = os.path.join(os.path.dirname(__file__), "app", "templates/home.html")
     return render_template(request.path, **request.query, templates_path=templates_path)
 
 if __name__ == "__main__":
