@@ -1,12 +1,12 @@
 {
   "builds": [
     {
-      "src": "/app/app.py",
+      "src": "/your_project/app/(.*)",
       "use": "vercel-python@3.8"
     }
   ],
   "routes": [
-    { "src": "/static/(.*)", "dest": "/app/static/$1" },
-    { "src": "/(.*)", "dest": "/app/vercel_wrapper.py" }
+    { "src": "/static/(.*)", "dest": "/your_project/app/static/$1" },
+    { "src": "/(.*)", "dest": "/your_project/vercel_wrapper.py" }
   ]
 }
