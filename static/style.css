@@ -37,10 +37,9 @@ p {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.Sociallinks div {
-    display: block;
+.Sociallinks {
+    display: flex;
     align-items: center;
-    text-align: center;
 }
 .Sociallinks h2 {
     font-size: xx-large;
@@ -51,8 +50,7 @@ p {
 }
 .github, .instagram, .email, .linkedin {
     font-size: 24px;
-    margin: auto;
-    padding: 25px;
+    margin: 10px;
     display: inline-block;
 }
 
