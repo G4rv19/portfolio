@@ -6,7 +6,7 @@
     }
   ],
   "routes": [
-    { "src": "/static/(.*)", "dest": "/your_project/app/static/$1" },
-    { "src": "/(.*)", "dest": "/your_project/vercel_wrapper.py" }
+    { "src": "/static/(.*)", "dest": "/home/G4rv19/portfolio/app/static/$1" },
+    { "src": "/(.*)", "dest": "/home/G4rv19/portfolio/vercel_wrapper.py" }
   ]
 }
