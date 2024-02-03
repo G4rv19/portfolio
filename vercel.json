@@ -8,5 +8,5 @@
     { "src": "/static/(.*)", "dest": "/your_project/app/static/$1" },
     { "src": "/(.*)", "dest": "/your_project/vercel_wrapper.py" }
   ],
-  "root": "app"  // Update this line to point to your Flask app directory
+  "root": "app"  
 }
