@@ -1,42 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garv</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Page</title>
+<style>
+    body {
+    background-image: url("/static/Pixel\ Background.gif");
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    background-size: cover; /* Ensure the image covers the entire body */
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .profile-picture {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 250px;
+        height: 70px;
+        background-color: #333;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: white;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        font-size: 15px; /* Adjust the font size as needed */
+        font-family: "Monospace", monospace; /* Use Monospace font */
+        margin: 5px;
+    }
+
+    .button img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        position: absolute;
+        left: 5px;
+    }
+
+    .button-icon {
+        margin-right: 10px;
+    }
+    .profile-picture {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 20px;
+        font-family: "Monospace", monospace;
+    }
+
+    p {
+    color: white;
+    text-align: center;
+    font-family: "Courier New", monospace; /* Changed the font to Courier New */
+    font-size: 30px;
+    }
+</style>
 </head>
 <body>
-    <div>
-        <h1>Welcome! 🐤 </h1>
-        <section>
-            <div>
-                <img src="https://i.pinimg.com/originals/55/bc/76/55bc762b72797918b66b6375fa96609f.gif" alt="Profile Image">
-            </div>
-            <p>Hi!👋 I am Garv 🐤, Currently Studying📚 Bachelor of Computer Science🧑‍💻.</p>
-        </section>
-        <div class="Projects">
-            <h2>My Projects~ ✨</h2>
-            <p>Coming Soon~ ✨</p>
-        </div>
-        <div class="Sociallinks">
-            <h2>My social Links ~✨</h2>
-            <div class="icons">
-                <a href="https://github.com/G4rv19" class="github">
-                    <button><i class="fa fa-github"></i></button>
-                </a>
-                <a href="https://www.instagram.com/g4r.v?igsh=MWhsZGJmbDNueGQ0cw%3D%3D&utm_source=qr" class="instagram">
-                    <button><i class="fa fa-instagram"></i></button>
-                </a>
-                <a href="mailto:garvsidana29@gmail.com" class="email">
-                    <button><i class="fa fa-envelope"></i></button>
-                </a>
-                <a href="https://www.linkedin.com/in/garv-174bb1257/" class="linkedin">
-                    <button><i class="fa fa-linkedin"></i></button>
-                </a>
-            </div>
-        </div>
+<<div class="container">
+    <div class="profile-picture">
+        <img src="/static/Web Profile.png" alt="Profile Picture">
     </div>
+    <p>Garv</p>
+    <a href="https://github.com/G4rv19" class="button">
+        <img src="/static/Github main.gif" alt="Button 1">
+        My Github ~
+    </a>
+    <a href="https://open.spotify.com/user/31t7eyl56zn3yu6xvrm5eovirowq?si=7359bff3b4f1426b" class="button">
+        <img src="/static/Spotify (1).png" alt="Button 2">
+        My Spotify ~
+    </a>
+    <a href="https://buymeacoffee.com/g4rv" class="button">
+        <img src="/static/Coffee main.jpeg" alt="Buy me Coffee" class="button-icon">
+        <span style="margin-left: 10px;">Buy me Coffee ~</span>
+    </a>    
+    <a href="https://www.instagram.com/g4r.v/" class="button">
+        <img src="/static/Insta main.jpeg" alt="Button 4">
+        My Instagram ~
+    </a>
+</div>
 </body>
 </html>
+
