@@ -1,112 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Profile Page</title>
-<style>
-    body {
-    background-image: url("/public/images/Pixel.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Prevent scrolling */
-    }
-
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        width: 100%;
-    }
-
-    .profile-picture {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin-bottom: 20px;
-    }
-
-    .button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 250px;
-        height: 70px;
-        background-color: #333;
-        margin-bottom: 10px;
-        text-decoration: none;
-        color: white;
-        border-radius: 20px;
-        overflow: hidden;
-        position: relative;
-        font-size: 15px; /* Adjust the font size as needed */
-        font-family: "Monospace", monospace; /* Use Monospace font */
-        margin: 5px;
-    }
-
-    .button img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50px;
-        position: absolute;
-        left: 5px;
-    }
-
-    .button-icon {
-        margin-right: 10px;
-    }
-    .profile-picture {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin-bottom: 20px;
-        font-family: "Monospace", monospace;
-    }
-
-    p {
-    color: white;
-    text-align: center;
-    font-family: "Courier New", monospace; /* Changed the font to Courier New */
-    font-size: 30px;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Profile</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FAF7F0;
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #D8D2C2;
+        }
+        h1 {
+            margin: 15px 0 5px;
+            font-size: 24px;
+            color: #B17457;
+        }
+        .subtitle {
+            font-size: 17px;
+            color: #B17457;
+            margin-bottom: 20px;
+        }
+        .skills {
+            display: flex;
+            gap: 15px;
+        }
+        .skills img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain; /* Ensures consistent scaling */
+            background-color: transparent; /* Ensures no background */
+        }
+        .email-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #B17457;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 60px;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .email-button:hover {
+            background-color: #8e543c;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-    <div class="profile-picture">
-        <img src="/public/images/Profile.png" alt="Profile Picture">
+    <img src="https://wallpapersok.com/images/hd/sukuna-neutral-face-4k-i37npqz55tpztb9i.jpg" alt="Profile Picture" class="profile-image">
+    <h1>Garv</h1>
+    <p class="subtitle">Crafting Code, Shaping Futures</p>
+    <div class="skills">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png" alt="C# Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_programming_language_black_logo.svg" alt="Rust Logo">
     </div>
-    <p>Garv</p>
-    <a href="https://github.com" class="button">
-        <img src="/public/images/Github.gif" alt="Button 1">
-        My Github ~
-    </a>
-    <a href="" class="button">
-        <img src="/public/images/Spotify.png" alt="Button 2">
-        My Spotify ~
-    </a>
-    <a href="" class="button">
-        <img src="/public/images/Coffee.jpeg" alt="Buy me Coffee" class="button-icon">
-        <span style="margin-left: 10px;">Buy me Coffee ~</span>
-    </a>    
-    <a href="https://www.instagram.com/g4r.v19/?img_index=1" class="button">
-        <img src="/public/images/Insta.jpeg" alt="Button 4">
-        My Instagram ~
-    </a>
-</div>
+     <a href="mailto:garvsidana29@gmail.com" class="email-button">Contact</a>
 </body>
 </html>
