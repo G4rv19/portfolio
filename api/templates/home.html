@@ -3,74 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Profile</title>
+    <title>Portfolio</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+        
         body {
+            font-family: 'Chalkduster', cursive;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #FAF7F0;
         }
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #D8D2C2;
-        }
-        h1 {
-            margin: 15px 0 5px;
-            font-size: 24px;
-            color: #B17457;
-        }
-        .subtitle {
-            font-size: 17px;
-            color: #B17457;
-            margin-bottom: 20px;
-        }
-        .skills {
+        .navbar {
             display: flex;
-            gap: 15px;
-        }
-        .skills img {
-            width: 50px;
-            height: 50px;
-            object-fit: contain; /* Ensures consistent scaling */
-            background-color: transparent; /* Ensures no background */
-        }
-        .email-button {
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1450px;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
             position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background-color: #B17457;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 60px;
-            cursor: pointer;
-            font-size: 14px;
-            text-decoration: none;
-            font-family: Arial, sans-serif;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f8f8f8;
+            z-index: 1000;
         }
-        .email-button:hover {
-            background-color: #8e543c;
+        .nav-link {
+            text-decoration: none;
+            color: black;
+        }
+        .content {
+            margin-top: 100px;
+            text-align: center;
+            padding-bottom: 100px;
+            width: 90%;
+            max-width: 600px;
+        }
+        .polaroid {
+            display: inline-block;
+            background: #DEE6EA;
+            padding: 20px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+            position: relative;
+            margin-top: 20%;
+            width: 400px;
+            height: 460px;
+        }
+        .profile {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            object-position: center;
+        }
+        .signature {
+            width: 33%;  /* Ensures it fits nicely within the polaroid */
+            margin: 0 auto;  /* Removes unwanted margins */
+            display: block;  /* Centers it inside the polaroid */
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            background: #F0341D;
+            border-radius: 50%;
+            position: absolute;
+            opacity: 0.8;
+        }
+        .circle.top-left {
+            top: -50px;
+            left: -50px;
+        }
+        .circle.bottom-right {
+            bottom: -50px;
+            right: -50px;
+        }
+        .click-image {
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%) translateX(-20%);
+            width: 250px;
+        }
+        .dropbtn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            font-family: 'Chalkduster';
+            font-weight: bold;
+            cursor: pointer;
+            color: black;
+            padding: 10px;
+        }
+
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown menu hidden by default */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f8f8f8;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            min-width: 150px;
+            right: 0;
+            z-index: 1000;
+            border-radius: 5px;
+        }
+
+        /* Style dropdown links */
+        .dropdown-content a {
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Hover effect */
+        .dropdown-content a:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Show dropdown when hovering over button */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        @media (max-width: 600px) {
+            .navbar {
+                font-size: 20px;
+            }
+            .polaroid {
+                width: 200px;
+                padding: 15px;
+            }
+            .click-image {
+                width: 50px;
+                left: calc(100% + 5px);
+            }
         }
     </style>
 </head>
 <body>
-    <img src="https://wallpapersok.com/images/hd/sukuna-neutral-face-4k-i37npqz55tpztb9i.jpg" alt="Profile Picture" class="profile-image">
-    <h1>Garv</h1>
-    <p class="subtitle">Crafting Code, Shaping Futures</p>
-    <div class="skills">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png" alt="C# Logo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_programming_language_black_logo.svg" alt="Rust Logo">
+    <body>
+        <div class="navbar">
+            <a href="#" class="nav-link">Garv</a>
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    <div class="content">
+        <div class="polaroid">
+            <div class="circle top-left"></div>
+            <img src="public/images/Profile.jpg" alt="Profile Picture" class="profile">
+            <img src="public/images/click.png" alt="image" class="click-image">
+            <img src="public/images/sign.png" alt="Signature" class="signature">
+            <div class="circle bottom-right"></div>
+        </div>
     </div>
-     <a href="mailto:garvsidana29@gmail.com" class="email-button">Contact</a>
 </body>
 </html>
