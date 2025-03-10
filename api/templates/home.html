@@ -20,10 +20,7 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            max-width: 1450px;
-            padding: 20px;
             font-size: 2rem; /* Changed to rem for better scaling */
-            font-weight: bold;
             position: fixed;
             top: 0;
             left: 50%;
@@ -34,6 +31,7 @@
         .nav-link {
             text-decoration: none;
             color: black;
+            margin: 10px;
         }
         .content {
             margin-top: 120px; /* Adjusted margin for better spacing below navbar */
@@ -93,6 +91,7 @@
             background: none;
             border: none;
             font-size: 2rem; /* Adjusted for better scaling */
+            margin: 10px;
             font-family: 'Chalkduster';
             cursor: pointer;
             color: black;
@@ -113,7 +112,7 @@
             min-width: 150px;
             right: 0;
             z-index: 1000;
-            border-radius: 20px;
+            border-radius: 0px;
         }
 
         /* Style dropdown links */
@@ -133,6 +132,56 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+        .work {
+            display: flex;
+            overflow-x: hidden;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            margin-top: 10%;
+        }
+        .slider-container {
+            display: flex;
+            width: 200%; /* Ensures smooth transition effect */
+            transition: transform 2s ease-in-out;
+        }
+
+        .slide {
+            flex: 0 0 75vw;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .next-preview {
+            flex: 0 0 25vw;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.7;
+        }
+        .controls button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 100px;
+            color: white;
+            cursor: pointer;
+            font-size: 2rem;
+            padding: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            height: 5%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
         @media (max-width: 600px) {
             .navbar {
                 font-size: 1.5rem; /* Slightly smaller text on small screens */
@@ -169,5 +218,39 @@
             <div class="circle bottom-right"></div>
         </div>
     </div>
+    <div class="work">
+        <div class="slide" style="background-image: url('public/images/IMG_5750.png');"></div>
+        <div class="next-preview" style="background-image: url('public/images/DSC00042.jpg');"></div>
+        <div class="controls">
+            <button onclick="prevSlide()">&#8592;</button>
+            <button onclick="nextSlide()">&#8594;</button>
+        </div>
+    </div>
+    <script>
+        let index = 0;
+        const images = ['public/images/IMG_5750.png', 'public/images/DSC00042.jpg', 'public/images/DSC00035.JPG','public/images/IMG_6177.png'];
+        const slide = document.getElementsByClassName('slide')[0];
+        const nextPreview = document.getElementsByClassName('next-preview')[0];
+
+        
+        function updateSlides() {
+        slide.style.backgroundImage = `url(${images[index]})`;
+        nextPreview.style.backgroundImage = `url(${images[(index + 1) % images.length]})`;
+        }
+
+        function nextSlide() {
+            index = (index + 1) % images.length;
+            slide.classList.add('transition');
+            updateSlides();
+        }
+
+        function prevSlide() {
+            index = (index - 1 + images.length) % images.length;
+            slide.classList.add('transition');
+            updateSlides();
+        }
+        updateSlides();
+    </script>
+
 </body>
 </html>
